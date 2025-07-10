@@ -6,7 +6,7 @@ import { RiVoiceAiFill } from "react-icons/ri";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { HiOutlineLightBulb } from "react-icons/hi";
 
-export default function Lines() {
+export default function Services() {
   const containerRef = useRef(null);
   const progressRef = useRef(null);
 
@@ -58,7 +58,7 @@ export default function Lines() {
 
   return (
     <>
-      <article id="gallery">
+      <article id="services">
         <header>
           <h2>Our Services</h2>
         </header>
@@ -103,16 +103,16 @@ export default function Lines() {
       <div className="progress" ref={progressRef}></div>
 
       <style jsx>{`
-        #gallery {
+        #services {
           width: 98vw;
         }
 
-        #gallery h3 {
+        #services h3 {
           font-family: "Azeret Mono", monospace;
         }
 
-        #gallery header,
-        #gallery footer {
+        #services header,
+        #services footer {
           height: 70vh;
           display: flex;
           justify-content: center;
@@ -145,7 +145,7 @@ export default function Lines() {
           flex-direction: column;
         }
 
-        #gallery header h2 {
+        #services header h2 {
           font-size: 56px;
           font-weight: 700;
           letter-spacing: -3px;

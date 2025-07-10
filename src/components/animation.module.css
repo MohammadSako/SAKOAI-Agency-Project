@@ -28,15 +28,6 @@
     .img {
       scale: 0.8;
       opacity: 0;
-      /* animation: fade-in linear forwards; */
-      /* animation-timeline: view(); */
-      /* animation-range-start: cover;
-      animation-range-end: contain; */
-      /* animation-range: contain 50px; */
-      /* animation-range: entry 500px; */
-      /* animation-range: exit; */
-      /* animation-range: entry-crossing; */
-      /* animation-range: exit-crossing; */
     }
     .img2 {
       scale: 1;
@@ -135,94 +126,6 @@
     }
   }
 }
-/*  */
-
-/* projects - pages */
-.maktabati {
-  animation: landind-phone-animation linear forwards;
-  animation-timeline: view();
-  animation-range: normal;
-  transform-origin: bottom;
-  /* height: 100vh; */
-  scale: 0;
-  opacity: 1;
-}
-@keyframes landind-phone-animation {
-  0% {
-    opacity: 0;
-    scale: 3;
-  }
-  20%,
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-.maktabatiText {
-  animation: landind-phonetext-animation linear forwards;
-  animation-timeline: view();
-  animation-range: normal;
-  transform-origin: left;
-  /* height: 100vh; */
-  scale: 1;
-  opacity: 1;
-}
-@keyframes landind-phonetext-animation {
-  0% {
-    opacity: 1;
-    scale: 1;
-  }
-
-  30% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-/* Shawkat Project */
-
-.Shawkat {
-  animation: landind-Shawkat-animation linear forwards;
-  animation-timeline: scale();
-  animation-range: normal;
-  transform-origin: bottom;
-  /* height: 100vh; */
-  scale: 0;
-  opacity: 1;
-}
-@keyframes landind-Shawkat-animation {
-  0% {
-    opacity: 0;
-    scale: 3;
-  }
-  30%,
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-.ShawkatText {
-  animation: landind-Shawkattext-animation linear backwards;
-  animation-timeline: view();
-  animation-range: normal;
-  transform-origin: bottom;
-  /* height: 100vh; */
-  scale: 1;
-  opacity: 1;
-}
-@keyframes landind-Shawkattext-animation {
-  0% {
-    opacity: 0;
-    scale: 1;
-  }
-  30%,
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
 
 /* Stacking Cards */
 .cards {
@@ -259,9 +162,9 @@
   position: relative;
   height: 100vh;
   background: radial-gradient(
-    circle,
+    circle farthest-side at center,
     rgba(0, 0, 0, 1) 0%,
-    rgba(31, 62, 142, 1) 0%,
+    rgb(109, 121, 166) 40%,
     rgba(255, 255, 255, 1) 100%
   );
 }

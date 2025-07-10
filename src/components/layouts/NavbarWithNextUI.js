@@ -89,7 +89,6 @@ export default function NavBarNextUI() {
         {navigation.map((item, index) => (
           <NavbarMenuItem
             key={item.name}
-            as="a"
             onClick={() => setActiveLink(item.href)}
             href={item.href}
             aria-current={item.current ? "page" : undefined}

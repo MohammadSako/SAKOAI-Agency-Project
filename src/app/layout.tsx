@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 import { NextUIProvider } from "@nextui-org/system";
 
 export const metadata: Metadata = {
-  title: "Mohammad Talal Murad",
-  description: "Mohammad Sako, Front End Developer",
+  title: "SAKOAI Agency",
+  description: "Mohammad Murad Sako, AI Agency",
 };
 
 export default function RootLayout({
