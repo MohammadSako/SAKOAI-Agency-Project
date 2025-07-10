@@ -1,0 +1,399 @@
+/* homescreen - pages */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* to let firefox show the images when animation not supported on it */
+  @supports (animation-timeline: view()) {
+    .text {
+      animation: landind-text-animation linear forwards;
+      animation-timeline: view();
+      animation-range: exit;
+      transform-origin: top;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .img {
+      animation: fade-in linear forwards;
+      animation-timeline: view();
+      animation-range: contain 50px;
+    }
+
+    .img2 {
+      animation: fade-in linear forwards;
+      animation-timeline: view();
+      animation-range: contain 50px;
+    }
+
+    /* Icons List page */
+    .img {
+      scale: 0.8;
+      opacity: 0;
+      /* animation: fade-in linear forwards; */
+      /* animation-timeline: view(); */
+      /* animation-range-start: cover;
+      animation-range-end: contain; */
+      /* animation-range: contain 50px; */
+      /* animation-range: entry 500px; */
+      /* animation-range: exit; */
+      /* animation-range: entry-crossing; */
+      /* animation-range: exit-crossing; */
+    }
+    .img2 {
+      scale: 1;
+      opacity: 0;
+    }
+    @keyframes fade-in {
+      from {
+      }
+      to {
+        scale: 1;
+        opacity: 1;
+      }
+    }
+    .text {
+      scale: 1;
+      opacity: 1;
+    }
+    @keyframes landind-text-animation {
+      25% {
+        opacity: 1;
+      }
+      55%,
+      100% {
+        opacity: 1;
+        scale: 3;
+      }
+    }
+
+    .tagList {
+      margin: 0;
+      padding-inline: 0;
+      list-style: none;
+    }
+    .tagList li {
+      padding: 1rem;
+      background: var(green);
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem -0.25rem var(blue);
+    }
+    .scroller {
+      max-width: 1000px;
+    }
+    .scrollerInner {
+      padding-block: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .scroller {
+      overflow: hidden;
+      -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white,
+        20%,
+        white,
+        80%,
+        transparent
+      );
+      mask: linear-gradient(
+        90deg,
+        transparent,
+        white,
+        20%,
+        white,
+        80%,
+        transparent
+      );
+    }
+
+    .scroller .scrollerInner {
+      width: max-content;
+      flex-wrap: nowrap;
+      animation: scroll var(--_animation-duration, 40s)
+        var(--_animation-direction, forwards) linear infinite;
+    }
+
+    .scroller[data-direction="right"] .scrollerInner {
+      --_animation-direction: reverse;
+    }
+    .scroller[data-direction="left"] .scrollerInner {
+      --_animation-direction: forwards;
+    }
+    .scroller[data-speed="slow"] .scrollerInner {
+      --_animation-duration: 60s;
+    }
+    .scroller[data-speed="fast"] .scrollerInner {
+      --_animation-duration: 30s;
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translate(calc(-50% - 0.5rem));
+      }
+    }
+  }
+}
+/*  */
+
+/* projects - pages */
+.maktabati {
+  animation: landind-phone-animation linear forwards;
+  animation-timeline: view();
+  animation-range: normal;
+  transform-origin: bottom;
+  /* height: 100vh; */
+  scale: 0;
+  opacity: 1;
+}
+@keyframes landind-phone-animation {
+  0% {
+    opacity: 0;
+    scale: 3;
+  }
+  20%,
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.maktabatiText {
+  animation: landind-phonetext-animation linear forwards;
+  animation-timeline: view();
+  animation-range: normal;
+  transform-origin: left;
+  /* height: 100vh; */
+  scale: 1;
+  opacity: 1;
+}
+@keyframes landind-phonetext-animation {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  30% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Shawkat Project */
+
+.Shawkat {
+  animation: landind-Shawkat-animation linear forwards;
+  animation-timeline: scale();
+  animation-range: normal;
+  transform-origin: bottom;
+  /* height: 100vh; */
+  scale: 0;
+  opacity: 1;
+}
+@keyframes landind-Shawkat-animation {
+  0% {
+    opacity: 0;
+    scale: 3;
+  }
+  30%,
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.ShawkatText {
+  animation: landind-Shawkattext-animation linear backwards;
+  animation-timeline: view();
+  animation-range: normal;
+  transform-origin: bottom;
+  /* height: 100vh; */
+  scale: 1;
+  opacity: 1;
+}
+@keyframes landind-Shawkattext-animation {
+  0% {
+    opacity: 0;
+    scale: 1;
+  }
+  30%,
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Stacking Cards */
+.cards {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 87vh);
+  gap: 4vw;
+  padding-bottom: calc(4 * 1.5em);
+  margin-bottom: 4vw;
+}
+.card1 {
+  position: sticky;
+  top: 0;
+  padding-top: calc(1 * 4em);
+}
+.card2 {
+  position: sticky;
+  top: 0;
+  padding-top: calc(2 * 4em);
+}
+.card3 {
+  position: sticky;
+  top: 0;
+  padding-top: calc(3 * 4em);
+}
+.card4 {
+  position: sticky;
+  top: 0;
+  padding-top: calc(4 * 4em);
+}
+.card1 .card_body {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(31, 62, 142, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.card1 .card_body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/project1/MaktabatiLogoWhite.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.card2 .card_body {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.card2 .card_body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/project2/shawkatWhite.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.card3 .card_body {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.card3 .card_body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/project3/obiadahshop.avif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* .card3 .card_body {
+  background-color: white;
+  height: 100vh;
+} */
+.card4 .card_body {
+  background-color: #d4afb9;
+  height: 100vh;
+}
+.card_body {
+  box-sizing: border-box;
+  padding: 30px;
+  /* border-radius: 50px; */
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  transition: all 0.5s;
+  padding: 100px 20px 100px 20px;
+}
+
+/* Memory timeline */
+
+.memory {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.memoryVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.memory:nth-child(even) {
+  transform: translateX(20px);
+}
+
+.memory:nth-child(odd) {
+  transform: translateX(-20px);
+}
+
+.memoryVisible:nth-child(even),
+.memoryVisible:nth-child(odd) {
+  transform: translateX(0);
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.memory h3 {
+  color: #333;
+}
+
+.memory p {
+  color: #666;
+}
+
+.memory img {
+  transition: transform 0.3s ease;
+}
+
+.memory:hover img {
+  transform: scale(1.05);
+}
