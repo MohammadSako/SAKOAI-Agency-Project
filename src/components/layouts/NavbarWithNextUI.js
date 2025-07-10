@@ -56,7 +56,7 @@ export default function NavBarNextUI() {
           <h1 className="text-center text-black text-3xl font-semibold font-sans tracking-tight">
             SAKO
             <span className="text-[#fd4c00]">A</span>
-            <span className="text-[#294cfc]">I</span>
+            <span className="text-[#294cfc]">I</span> <span className="font-light">Agency</span>
           </h1>
         </NavbarBrand>
       </NavbarContent>
