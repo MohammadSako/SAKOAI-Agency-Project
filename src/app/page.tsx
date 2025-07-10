@@ -1,8 +1,8 @@
 import Landing from "../components/homescreen/landing";
 import IconsList from "../components/homescreen/IconsList";
-import Projects from "../components/homescreen/projects";
 import TimeLine from "../components/projects/timeline";
 import Lines from "../components/homescreen/lines";
+import Sections from "../components/homescreen/sections";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Landing />
       <Lines />
       {/* <IconsList /> */}
-      <Projects />
+      <Sections />
       {/* <TimeLine /> */}
     </main>
   );
