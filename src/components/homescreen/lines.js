@@ -32,17 +32,17 @@ export default function Lines() {
       description:
         "Imagine having a smart, friendly receptionist who never misses a call.",
       styled:
-        "bg-[#2f6ee1] shadow-2xl rounded-full p-4 mt-4 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#2f6ee1] shadow-2xl rounded-2xl p-2 m-10 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "2",
       name: "Breathe new life into your existing content.",
       icon: HiOutlineSparkles,
-      iconcolor: "#FF5911",
+      iconcolor: "#9911ff",
       description:
         "We’ll help you repurpose what you already have into fresh, high-performing posts, so you get more reach with less effort.",
       styled:
-        "bg-[#FF5911] shadow-2xl rounded-2xl p-4 mt-4 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#9911ff] shadow-2xl rounded-2xl p-2 m-10 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "3",
@@ -52,28 +52,31 @@ export default function Lines() {
       description:
         "Got a brilliant idea? We’ll turn it into a fully working AI app in just 2-4 weeks.",
       styled:
-        "bg-[#fafa82] shadow-2xl rounded-2xl p-4 mt-4 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
+        "bg-[#fafa82] shadow-2xl rounded-2xl p-2 m-10 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
     },
   ];
-  
+
   return (
     <>
       <article id="gallery">
+        <header>
+          <h2>Our Services</h2>
+        </header>
         <section className="img-group-container" ref={containerRef}>
           <div>
             <ul className="img-group">
               {services.map((service) => {
                 const Icon = service.icon;
                 return (
-                  <li className="img-container" key={service.id}>
+                  <li className="img-container " key={service.id}>
                     <div className="flex justify-center items-center p-2 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 ">
                       <Icon
-                        className="h-40 w-40 text-sky-600"
+                        className="h-32 w-32 text-sky-600"
                         color={service.iconcolor}
                       />
                     </div>
-                    <div className="mx-auto max-w-4xl text-center">
-                      <p className="mt-2 text-3xl font-semibold tracking-tight text-balance sm:text-5xl">
+                    <div className="mx-auto max-w-2xl text-center">
+                      <p className="text-2xl font-semibold tracking-tight text-balance sm:text-5xl">
                         {service.name}
                       </p>
                     </div>
@@ -117,7 +120,7 @@ export default function Lines() {
         }
 
         .img-group-container {
-          height: 500vh;
+          height: 3000vh;
           position: relative;
         }
 
@@ -172,10 +175,9 @@ export default function Lines() {
           left: 0;
           right: 0;
           height: 5px;
-          background: #0091d7;
+          background: #9911ff;
           bottom: 50px;
           transform: scaleX(0);
-          transform-origin: left;
         }
       `}</style>
     </>
