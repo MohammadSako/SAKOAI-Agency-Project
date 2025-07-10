@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../animation.module.css";
 import SocialProof from "../Sections/socialProof";
+import States from "../Sections/states";
 
 function Sections() {
   return (
@@ -15,7 +16,7 @@ function Sections() {
             </li>
             <li className={styles.card2}>
               <div className={styles.card_body}>
-                {/* <Project2 /> */}
+                <States />
               </div>
             </li>
             <li className={styles.card3}>

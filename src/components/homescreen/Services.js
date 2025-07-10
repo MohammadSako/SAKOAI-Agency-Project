@@ -5,6 +5,7 @@ import { animate, scroll } from "framer-motion";
 import { RiVoiceAiFill } from "react-icons/ri";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { HiOutlineLightBulb } from "react-icons/hi";
+import ShineButton from "../UI/shineButton";
 
 export default function Services() {
   const containerRef = useRef(null);
@@ -32,7 +33,7 @@ export default function Services() {
       description:
         "Imagine having a smart, friendly receptionist who never misses a call.",
       styled:
-        "bg-[#2f6ee1] shadow-2xl rounded-2xl p-2 m-10 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#2f6ee1] shadow-2xl rounded-2xl lg:p-4 p-2 m-10 lg:max-w-2xl max-w-md text-center tracking-tight lg:text-3xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "2",
@@ -42,7 +43,7 @@ export default function Services() {
       description:
         "We’ll help you repurpose what you already have into fresh, high-performing posts, so you get more reach with less effort.",
       styled:
-        "bg-[#9911ff] shadow-2xl rounded-2xl p-2 m-10 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#9911ff] shadow-2xl rounded-2xl lg:p-4 p-2 m-10 lg:max-w-2xl max-w-md text-center tracking-tight lg:text-3xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "3",
@@ -52,7 +53,7 @@ export default function Services() {
       description:
         "Got a brilliant idea? We’ll turn it into a fully working AI app in just 2-4 weeks.",
       styled:
-        "bg-[#fafa82] shadow-2xl rounded-2xl p-2 m-10 max-w-md text-center tracking-tight text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
+        "bg-[#fafa82] shadow-2xl rounded-2xl lg:p-4 p-2 m-10 lg:max-w-2xl max-w-md text-center tracking-tight lg:text-3xl text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
     },
   ];
 
@@ -75,8 +76,8 @@ export default function Services() {
                         color={service.iconcolor}
                       />
                     </div>
-                    <div className="mx-auto max-w-2xl text-center">
-                      <p className="text-2xl font-semibold tracking-tight text-balance sm:text-5xl">
+                    <div className="mx-auto lg:max-w-6xl max-w-2xl text-center">
+                      <p className="text-2xl font-semibold tracking-tight text-balance sm:text-6xl">
                         {service.name}
                       </p>
                     </div>
@@ -88,16 +89,16 @@ export default function Services() {
           </div>
         </section>
         <footer>
-          <p>
-            Photos by{" "}
-            <a
-              target="_blank"
-              href="https://twitter.com/mattgperry"
-              rel="noopener noreferrer"
-            >
-              Matt Perry
-            </a>
-          </p>
+
+          <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-8">
+            <p className="text-2xl font-semibold tracking-tight text-balance sm:text-6xl font-serif">
+              Book Your Consultation
+            </p>
+            <p className="text-xl font-thin tracking-tight text-balance sm:text-4xl font-mono">
+              Transform your ideas into reality. Schedule a free consultation with our team today.
+            </p>
+            <ShineButton title="Start Now" />
+          </div>
         </footer>
       </article>
       <div className="progress" ref={progressRef}></div>
