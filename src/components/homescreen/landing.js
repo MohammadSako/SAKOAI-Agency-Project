@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { HiOutlineArrowRight } from "react-icons/hi2";
 export default function Landing() {
   return (
     <motion.section
@@ -8,7 +9,7 @@ export default function Landing() {
       whileInView={{ opacity: 1, translateY: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="flex flex-col items-center gap-4 w-full overflow-hidden origin-center"
+      className="min-h-screen flex flex-col items-center gap-4 w-full overflow-hidden origin-center"
     >
       <div className="bg-white " id="home">
         <div className=" isolate px-6 pt-14 lg:px-8">
@@ -57,17 +58,27 @@ export default function Landing() {
                 </span>{" "}
                 days or less.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get started
-                </a>
-                <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                  Learn more <span aria-hidden="true">→</span>
-                </a>
-              </div>
+              <motion.section
+                initial={{ opacity: 0, translateY: 100 }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 1.3 }}
+                className="min-h-screen flex flex-col items-center gap-4 w-full overflow-hidden origin-center"
+              >
+                <div className="mt-10 flex items-center justify-center gap-x-6">
+                  <a href="#call-to-action">
+                    <div className="relative inline-block group">
+                      <button className="relative flex items-center justify-center gap-4 py-4 px-6  bg-sky-600 text-3xl hover:bg-sky-700 text-white font-semibold rounded-full shadow-lg overflow-hidden transition duration-300">
+                        <span className="relative z-10 flex items-center gap-4">
+                          Start Now
+                          <HiOutlineArrowRight className="text-4xl" />
+                        </span>
+                        <span className="shine"></span>
+                      </button>
+                    </div>
+                  </a>
+                </div>
+              </motion.section>
             </div>
           </div>
         </div>

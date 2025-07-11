@@ -33,7 +33,7 @@ export default function Services() {
       description:
         "Imagine having a smart, friendly receptionist who never misses a call.",
       styled:
-        "bg-[#2f6ee1] shadow-2xl rounded-2xl lg:p-4 p-2 m-10 lg:max-w-2xl max-w-md text-center tracking-tight lg:text-3xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#2f6ee1] shadow-md rounded-2xl lg:p-4 p-2 m-10 lg:max-w-lg max-w-md text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "2",
@@ -43,7 +43,7 @@ export default function Services() {
       description:
         "We’ll help you repurpose what you already have into fresh, high-performing posts, so you get more reach with less effort.",
       styled:
-        "bg-[#9911ff] shadow-2xl rounded-2xl lg:p-4 p-2 m-10 lg:max-w-2xl max-w-md text-center tracking-tight lg:text-3xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#9911ff] shadow-md rounded-2xl lg:p-4 p-2 m-10 lg:max-w-lg max-w-md text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "3",
@@ -53,15 +53,17 @@ export default function Services() {
       description:
         "Got a brilliant idea? We’ll turn it into a fully working AI app in just 2-4 weeks.",
       styled:
-        "bg-[#fafa82] shadow-2xl rounded-2xl lg:p-4 p-2 m-10 lg:max-w-2xl max-w-md text-center tracking-tight lg:text-3xl text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
+        "bg-[#fafa82] shadow-md rounded-2xl lg:p-4 p-2 m-10 lg:max-w-lg max-w-md text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
     },
   ];
 
   return (
-    <>
-      <article id="services">
+    <div id="services">
+      <article>
         <header>
-          <h2>Our Services</h2>
+          <p className=" text-7xl font-sans font-bold tracking-tight text-balance">
+            Our Services
+          </p>
         </header>
         <section className="img-group-container" ref={containerRef}>
           <div>
@@ -72,12 +74,12 @@ export default function Services() {
                   <li className="img-container " key={service.id}>
                     <div className="flex justify-center items-center p-2 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 ">
                       <Icon
-                        className="h-32 w-32 text-sky-600"
+                        className="h-28 w-28 text-sky-600"
                         color={service.iconcolor}
                       />
                     </div>
-                    <div className="mx-auto lg:max-w-6xl max-w-2xl text-center">
-                      <p className="text-2xl font-semibold tracking-tight text-balance sm:text-6xl">
+                    <div className="mx-auto lg:max-w-xl max-w-2xl text-center font-sans">
+                      <p className="text-2xl font-semibold tracking-tight text-balance sm:text-4xl">
                         {service.name}
                       </p>
                     </div>
@@ -89,13 +91,13 @@ export default function Services() {
           </div>
         </section>
         <footer>
-
           <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-8">
             <p className="text-2xl font-semibold tracking-tight text-balance sm:text-6xl font-serif">
               Book Your Consultation
             </p>
             <p className="text-xl font-thin tracking-tight text-balance sm:text-4xl font-mono">
-              Transform your ideas into reality. Schedule a free consultation with our team today.
+              Transform your ideas into reality. Schedule a free consultation
+              with our team today.
             </p>
             <ShineButton title="Start Now" />
           </div>
@@ -114,14 +116,13 @@ export default function Services() {
 
         #services header,
         #services footer {
-          height: 70vh;
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
         .img-group-container {
-          height: 3000vh;
+          height: 800vh;
           position: relative;
         }
 
@@ -139,7 +140,7 @@ export default function Services() {
         .img-container {
           display: flex;
           width: 100vw;
-          height: 100vh;
+          height: 93vh;
           flex: 0 0 auto;
           align-items: center;
           justify-content: center;
@@ -181,6 +182,6 @@ export default function Services() {
           transform: scaleX(0);
         }
       `}</style>
-    </>
+    </div>
   );
 }
