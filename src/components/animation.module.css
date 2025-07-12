@@ -180,7 +180,7 @@
 .card2 .card_body {
   position: relative;
   height: 100vh;
-  background: white;
+  background: hwb(213 24% 58%);
 }
 
 .card2 .card_body::after {

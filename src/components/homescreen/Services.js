@@ -24,10 +24,10 @@ export default function Services() {
     scroll(animate(progress, { scaleX: [0, 1] }), { target: container });
   }, []);
 
-  const commonDescStyles =
-    "shadow-md rounded-2xl lg:p-4 p-2 mx-auto m-10 lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl";
   const commonNameStyles =
-    "text-2xl font-semibold tracking-tight text-balance sm:text-4xl";
+    "text-3xl font-semibold tracking-tight text-balance sm:text-4xl";
+  const commonDescStyles =
+    "shadow-md rounded-xl bg-white lg:p-4 p-2 mx-auto mt-4 lg:max-w-lg max-w-sm tracking-wide lg:text-2xl text-lg font-bold text-pretty text-sky-700 sm:text-2xl";
 
   const services = [
     {
@@ -37,8 +37,8 @@ export default function Services() {
       iconcolor: "#2f6ee1",
       description:
         "Imagine having a smart, friendly receptionist who never misses a call.",
-      nameStyled: `${commonNameStyles}`,
-      descriptionStyled: `bg-[#2f6ee1] ${commonDescStyles}`,
+      nameStyled: commonNameStyles,
+      descriptionStyled: commonDescStyles,
     },
     {
       id: "2",
@@ -47,8 +47,8 @@ export default function Services() {
       iconcolor: "#9911ff",
       description:
         "We’ll help you repurpose what you already have into fresh, high-performing posts, so you get more reach with less effort.",
-      nameStyled: `${commonNameStyles}`,
-      descriptionStyled: `bg-[#9911ff] ${commonDescStyles}`,
+      nameStyled: commonNameStyles,
+      descriptionStyled: commonDescStyles,
     },
     {
       id: "3",
@@ -57,8 +57,8 @@ export default function Services() {
       iconcolor: "#e1e150",
       description:
         "Got a brilliant idea? We’ll turn it into a fully working AI app in just 2-4 weeks.",
-      nameStyled: `${commonNameStyles}`,
-      descriptionStyled: `bg-[#b39f20] ${commonDescStyles}`,
+      nameStyled: commonNameStyles,
+      descriptionStyled: commonDescStyles,
     },
   ];
 
@@ -107,7 +107,7 @@ export default function Services() {
               Transform your ideas into reality. Schedule a free consultation
               with our team today.
             </p>
-            <ShineButton title="Start Now" />
+            <ShineButton title="Start Now" bgcolor="#0084d1" textColor="white" />
           </div>
         </footer>
       </article>

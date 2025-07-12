@@ -32,6 +32,7 @@ export default function SocialProof() {
       position: "Co-Founder & CEO at Unmirror Studio",
     },
   ];
+
   return (
     <>
       <motion.section
@@ -44,7 +45,7 @@ export default function SocialProof() {
         <div id="social-proof" className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl lg:max-w-5xl">
             <div className="text-center mb-10">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight xl:text-white lg:text-gray-700 sm:text-gray-700 text-gray-800">
                 Loved and trusted by amazing companies globally
               </h1>
             </div>

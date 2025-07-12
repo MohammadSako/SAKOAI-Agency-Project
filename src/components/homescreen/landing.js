@@ -68,7 +68,7 @@ export default function Landing() {
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a href="#call-to-action">
                     <div className="relative inline-block group">
-                      <button className="relative flex items-center justify-center gap-4 py-4 px-6  bg-sky-600 text-3xl hover:bg-sky-700 text-white font-semibold rounded-full shadow-lg overflow-hidden transition duration-300">
+                      <button className="relative flex items-center justify-center gap-4 py-2 px-4  bg-sky-600 text-3xl hover:bg-sky-700 text-white font-semibold rounded-full shadow-lg overflow-hidden transition duration-300">
                         <span className="relative z-10 flex items-center gap-4">
                           Start Now
                           <HiOutlineArrowRight className="text-4xl" />
