@@ -33,7 +33,7 @@ export default function Services() {
       description:
         "Imagine having a smart, friendly receptionist who never misses a call.",
       styled:
-        "bg-[#2f6ee1] shadow-md rounded-2xl lg:p-4 p-2 m-10 lg:max-w-lg max-w-md text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#2f6ee1] shadow-md rounded-2xl lg:p-4 p-1 m-4 mx-auto lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "2",
@@ -43,7 +43,7 @@ export default function Services() {
       description:
         "We’ll help you repurpose what you already have into fresh, high-performing posts, so you get more reach with less effort.",
       styled:
-        "bg-[#9911ff] shadow-md rounded-2xl lg:p-4 p-2 m-10 lg:max-w-lg max-w-md text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+        "bg-[#9911ff] shadow-md rounded-2xl lg:p-4 p-2 mx-auto m-10 lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
     },
     {
       id: "3",
@@ -53,7 +53,7 @@ export default function Services() {
       description:
         "Got a brilliant idea? We’ll turn it into a fully working AI app in just 2-4 weeks.",
       styled:
-        "bg-[#fafa82] shadow-md rounded-2xl lg:p-4 p-2 m-10 lg:max-w-lg max-w-md text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
+        "bg-[#fafa82] shadow-md rounded-2xl lg:p-4 p-2 mx-auto m-10 lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function Services() {
     <div id="services">
       <article>
         <header>
-          <p className=" text-7xl font-sans font-bold tracking-tight text-balance">
+          <p className="text-7xl font-sans font-bold tracking-tight text-balance">
             Our Services
           </p>
         </header>
@@ -71,19 +71,22 @@ export default function Services() {
               {services.map((service) => {
                 const Icon = service.icon;
                 return (
-                  <li className="img-container " key={service.id}>
+                  <li
+                    className="img-container 2xl:max-w-lg 2xl:ml-[750px] xl:max-w-xl xl:ml-[500px] lg:max-w-lg lg:ml-[250px] md:max-w-xl md:ml-[150px] sm:max-w-lg sm:ml-[130px] xs:max-w-sm xs:ml-[105px] max-w-xs ml-[63px] "
+                    key={service.id}
+                  >
                     <div className="flex justify-center items-center p-2 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 ">
                       <Icon
                         className="h-28 w-28 text-sky-600"
                         color={service.iconcolor}
                       />
                     </div>
-                    <div className="mx-auto lg:max-w-xl max-w-2xl text-center font-sans">
+                    <div className="mx-auto lg:max-w-xl max-w-xl text-center font-sans">
                       <p className="text-2xl font-semibold tracking-tight text-balance sm:text-4xl">
                         {service.name}
                       </p>
+                      <p className={service.styled}>{service.description}</p>
                     </div>
-                    <p className={service.styled}>{service.description}</p>
                   </li>
                 );
               })}
@@ -92,10 +95,10 @@ export default function Services() {
         </section>
         <footer>
           <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-8">
-            <p className="text-2xl font-semibold tracking-tight text-balance sm:text-6xl font-serif">
+            <p className="text-6xl font-semibold tracking-tight text-balance font-serif">
               Book Your Consultation
             </p>
-            <p className="text-xl font-thin tracking-tight text-balance sm:text-4xl font-mono">
+            <p className="text-4xl font-thin tracking-tight text-balance font-mono">
               Transform your ideas into reality. Schedule a free consultation
               with our team today.
             </p>
@@ -116,13 +119,14 @@ export default function Services() {
 
         #services header,
         #services footer {
+          // height: 70vh;
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
         .img-group-container {
-          height: 800vh;
+          height: 700vh;
           position: relative;
         }
 
@@ -140,7 +144,7 @@ export default function Services() {
         .img-container {
           display: flex;
           width: 100vw;
-          height: 93vh;
+          height: 100vh;
           flex: 0 0 auto;
           align-items: center;
           justify-content: center;

@@ -63,7 +63,7 @@ export default function Landing() {
                 whileInView={{ opacity: 1, translateY: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 1.3 }}
-                className="min-h-screen flex flex-col items-center gap-4 w-full overflow-hidden origin-center"
+                className=" flex flex-col items-center gap-4 w-full overflow-hidden origin-center"
               >
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a href="#call-to-action">
