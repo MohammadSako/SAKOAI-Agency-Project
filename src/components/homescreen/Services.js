@@ -103,13 +103,15 @@ export default function Services() {
               <Sphare />
             </div>
         <footer>
-          <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-10 pb-20">
+          <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-4 pb-20">
             <p className="text-6xl font-semibold tracking-tight text-balance font-serif">
               Book Your Consultation
             </p>
             <p className="text-4xl font-thin tracking-tight text-balance font-mono">
-              Transform your ideas into reality. Schedule a free consultation
-              with our team today.
+              Transform your ideas into reality
+            </p>
+            <p className="text-4xl font-thin tracking-tight text-balance font-mono text-sky-700">
+              Schedule a free consultation with our team today
             </p>
             <ShineButton
               title="Start Now"
