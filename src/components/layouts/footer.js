@@ -6,7 +6,7 @@ import { FaRegCopyright, FaWhatsapp } from "react-icons/fa6";
 function Footer() {
   return (
     <>
-      <div className=" max-w-7xl sm:p p-4 z-10 bg-white">
+      <div className="w-full  sm:p p-4 z-10 bg-white">
         <div
           style={{
             backgroundColor: "#c1c1c1",
@@ -14,7 +14,7 @@ function Footer() {
             width: "100%",
           }}
         />
-        <footer className="flex sm:flex-row flex-col font-sans text-lg font-thin tracking-tight text-gray-400 justify-between my-10 gap-y-10">
+        <footer className="flex sm:flex-row flex-col font-sans text-lg font-thin tracking-tight text-gray-400 justify-between my-10 gap-y-10 lg:mx-10">
           <div className="flex lg:flex-row flex-col xl:basis-3/5 sm:basis-4/5 lg:space-x-8">
             <div className="flex flex-row gap-1">
               <div className="flex mt-2">
