@@ -24,6 +24,11 @@ export default function Services() {
     scroll(animate(progress, { scaleX: [0, 1] }), { target: container });
   }, []);
 
+  const commonDescStyles =
+    "shadow-md rounded-2xl lg:p-4 p-2 mx-auto m-10 lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl";
+  const commonNameStyles =
+    "text-2xl font-semibold tracking-tight text-balance sm:text-4xl";
+
   const services = [
     {
       id: "1",
@@ -32,8 +37,8 @@ export default function Services() {
       iconcolor: "#2f6ee1",
       description:
         "Imagine having a smart, friendly receptionist who never misses a call.",
-      styled:
-        "bg-[#2f6ee1] shadow-md rounded-2xl lg:p-4 p-1 m-4 mx-auto lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+      nameStyled: `${commonNameStyles}`,
+      descriptionStyled: `bg-[#2f6ee1] ${commonDescStyles}`,
     },
     {
       id: "2",
@@ -42,8 +47,8 @@ export default function Services() {
       iconcolor: "#9911ff",
       description:
         "We’ll help you repurpose what you already have into fresh, high-performing posts, so you get more reach with less effort.",
-      styled:
-        "bg-[#9911ff] shadow-md rounded-2xl lg:p-4 p-2 mx-auto m-10 lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-white sm:text-2xl",
+      nameStyled: `${commonNameStyles}`,
+      descriptionStyled: `bg-[#9911ff] ${commonDescStyles}`,
     },
     {
       id: "3",
@@ -52,8 +57,8 @@ export default function Services() {
       iconcolor: "#e1e150",
       description:
         "Got a brilliant idea? We’ll turn it into a fully working AI app in just 2-4 weeks.",
-      styled:
-        "bg-[#fafa82] shadow-md rounded-2xl lg:p-4 p-2 mx-auto m-10 lg:max-w-lg max-w-sm text-center tracking-tight lg:text-2xl text-lg font-mono font-bold text-pretty text-gray-900 sm:text-2xl",
+      nameStyled: `${commonNameStyles}`,
+      descriptionStyled: `bg-[#b39f20] ${commonDescStyles}`,
     },
   ];
 
@@ -82,10 +87,10 @@ export default function Services() {
                       />
                     </div>
                     <div className="mx-auto lg:max-w-xl max-w-xl text-center font-sans">
-                      <p className="text-2xl font-semibold tracking-tight text-balance sm:text-4xl">
-                        {service.name}
+                      <p className={service.nameStyled}>{service.name}</p>
+                      <p className={service.descriptionStyled}>
+                        {service.description}
                       </p>
-                      <p className={service.styled}>{service.description}</p>
                     </div>
                   </li>
                 );
@@ -94,7 +99,7 @@ export default function Services() {
           </div>
         </section>
         <footer>
-          <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-8">
+          <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-10 pb-20">
             <p className="text-6xl font-semibold tracking-tight text-balance font-serif">
               Book Your Consultation
             </p>
