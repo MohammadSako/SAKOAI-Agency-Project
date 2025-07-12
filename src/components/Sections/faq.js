@@ -6,8 +6,31 @@ import {
 } from "../UI/accordion";
 
 export default function Faq() {
+  const faq = [
+    {
+      title: "What is the typical timeline for development?",
+      desc: "I’ll provide you with a clear project timeline upfront, based on your specific requirements. Most AI projects take 4–8 weeks, depending on complexity.",
+    },
+    {
+      title: "How do you ensure the AI solution meets my business needs?",
+      desc: "I start by thoroughly understanding your goals through a discovery call, then design a tailored solution with regular feedback loops. This ensures the final product aligns perfectly with your business objectives.",
+    },
+    {
+      title: "Who is this service ideally for?",
+      desc: "My services are ideal for startups, SMEs, and tech-driven companies looking to integrate AI into their products or automate critical processes.",
+    },
+    {
+      title: "What technology stack do you use?",
+      desc: "I primarily work with Python, TensorFlow, PyTorch, and FastAPI, along with React and Next.js for any front-end or dashboard needs. I also deploy on cloud platforms like AWS and GCP.",
+    },
+    {
+      title: "What kind of post-launch support do you provide?",
+      desc: "I offer 30 days of complimentary support after launch to handle tweaks or bug fixes, plus optional ongoing maintenance plans to keep your AI solution optimized.",
+    },
+  ];
+
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8" id="faqs">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
           FAQ
@@ -18,50 +41,16 @@ export default function Faq() {
           className="w-full"
           defaultValue="item-1"
         >
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Product Information</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                Our flagship product combines cutting-edge technology with sleek
-                design. Built with premium materials, it offers unparalleled
-                performance and reliability.
-              </p>
-              <p>
-                Key features include advanced processing capabilities, and an
-                intuitive user interface designed for both beginners and
-                experts.
-              </p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Shipping Details</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                We offer worldwide shipping through trusted courier partners.
-                Standard delivery takes 3-5 business days, while express
-                shipping ensures delivery within 1-2 business days.
-              </p>
-              <p>
-                All orders are carefully packaged and fully insured. Track your
-                shipment in real-time through our dedicated tracking portal.
-              </p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Return Policy</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                We stand behind our products with a comprehensive 30-day return
-                policy. If you&apos;re not completely satisfied, simply return
-                the item in its original condition.
-              </p>
-              <p>
-                Our hassle-free return process includes free return shipping and
-                full refunds processed within 48 hours of receiving the returned
-                item.
-              </p>
-            </AccordionContent>
-          </AccordionItem>
+          {faq.map((item, index) => (
+            <AccordionItem key={index} value={item.title}>
+              <AccordionTrigger className="text-xl">
+                {item.title}
+              </AccordionTrigger>
+              <AccordionContent className="text-left text-lg text-gray-600">
+                <p>{item.desc}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </div>

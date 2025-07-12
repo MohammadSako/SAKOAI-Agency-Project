@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ShineButton from "../UI/shineButton";
+import Link from "next/link";
 
 export default function Logos() {
   return (
@@ -51,7 +52,9 @@ export default function Logos() {
         </div>
       </div>
       <div>
-        <ShineButton title="Start Now" bgcolor="#446a9b" textColor="white" />
+        <Link href="#call">
+          <ShineButton title="Start Now" bgcolor="#446a9b" textColor="white" />
+        </Link>
       </div>
     </div>
   );

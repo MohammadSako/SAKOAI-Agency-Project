@@ -46,7 +46,11 @@ export default function NavBarNextUI() {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="mt-6">
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="mt-6"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -56,7 +60,8 @@ export default function NavBarNextUI() {
           <h1 className="text-center text-black text-3xl font-semibold font-sans tracking-tight">
             SAKO
             <span className="text-[#fd4c00]">A</span>
-            <span className="text-[#294cfc]">I</span> <span className="font-light">Agency</span>
+            <span className="text-[#294cfc]">I</span>{" "}
+            <span className="font-light">Agency</span>
           </h1>
         </NavbarBrand>
       </NavbarContent>
@@ -86,20 +91,23 @@ export default function NavBarNextUI() {
       </NavbarContent>
 
       <NavbarMenu className="mt-6">
-        {navigation.map((item, index) => (
-          <NavbarMenuItem
-            key={item.name}
-            onClick={() => setActiveLink(item.href)}
-            href={item.href}
-            aria-current={item.current ? "page" : undefined}
-            className={classNames(
-              activeLink === item.href
-                ? "bg-sky-600 text-white"
-                : "text-gray-700 hover:bg-sky-600 hover:text-white",
-              "block rounded-md px-3 py-2 text-base font-medium"
-            )}
-          >
-            {item.name}
+        {navigation.map((item) => (
+          <NavbarMenuItem key={item.name}>
+            <a
+              href={item.href}
+              onClick={() => {
+                setActiveLink(item.href);
+                setIsMenuOpen(false);
+              }}
+              className={classNames(
+                activeLink === item.href
+                  ? "bg-sky-600 text-white"
+                  : "text-gray-700 hover:bg-sky-600 hover:text-white",
+                "block rounded-md px-3 py-2 text-base font-medium"
+              )}
+            >
+              {item.name}
+            </a>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

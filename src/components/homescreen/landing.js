@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 
 export default function Landing() {
@@ -67,7 +68,7 @@ export default function Landing() {
                 className=" flex flex-col items-center gap-4 w-full overflow-hidden origin-center"
               >
                 <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <a href="#call-to-action">
+                  <Link href="#call">
                     <div className="relative inline-block group">
                       <button className="relative flex items-center justify-center gap-4 py-2 px-4  bg-sky-600 text-3xl hover:bg-sky-700 text-white font-semibold rounded-full shadow-lg overflow-hidden transition duration-300">
                         <span className="relative z-10 flex items-center gap-4">
@@ -77,7 +78,7 @@ export default function Landing() {
                         <span className="shine"></span>
                       </button>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </motion.section>
             </div>

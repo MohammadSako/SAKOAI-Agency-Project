@@ -4,8 +4,6 @@ import SocialProof from "../Sections/socialProof";
 import Logos from "../Sections/logos";
 import CallToAction from "../Sections/callToAction";
 
-
-
 function Sections() {
   return (
     <>

@@ -7,6 +7,7 @@ import { HiOutlineSparkles } from "react-icons/hi2";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import ShineButton from "../UI/shineButton";
 import Sphare from "../sphare";
+import Link from "next/link";
 
 export default function Services() {
   const containerRef = useRef(null);
@@ -67,7 +68,7 @@ export default function Services() {
     <div id="services">
       <article>
         <header>
-          <p className="text-7xl font-sans font-bold tracking-tight text-balance">
+          <p className="text-7xl font-sans font-bold tracking-tight text-balance mt-20">
             Our Services
           </p>
         </header>
@@ -99,9 +100,9 @@ export default function Services() {
             </ul>
           </div>
         </section>
-            <div className="flex inset-0 z-10 pointer-events-none">
-              <Sphare />
-            </div>
+        <div className="flex inset-0 z-10 pointer-events-none">
+          <Sphare />
+        </div>
         <footer>
           <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-4 pb-20">
             <p className="text-6xl font-semibold tracking-tight text-balance font-serif">
@@ -113,11 +114,13 @@ export default function Services() {
             <p className="text-4xl font-thin tracking-tight text-balance font-mono text-sky-700">
               Schedule a free consultation with our team today
             </p>
-            <ShineButton
-              title="Start Now"
-              bgcolor="#0084d1"
-              textColor="white"
-            />
+            <Link href="#call">
+              <ShineButton
+                title="Start Now"
+                bgcolor="#0084d1"
+                textColor="white"
+              />
+            </Link>
           </div>
         </footer>
       </article>

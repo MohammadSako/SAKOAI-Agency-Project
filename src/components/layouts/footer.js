@@ -6,7 +6,7 @@ import { FaRegCopyright, FaWhatsapp } from "react-icons/fa6";
 function Footer() {
   return (
     <>
-      <div className="mx-auto max-w-7xl sm:p p-4">
+      <div className=" max-w-7xl sm:p p-4 z-10 bg-white">
         <div
           style={{
             backgroundColor: "#c1c1c1",
@@ -21,11 +21,11 @@ function Footer() {
                 <FaRegCopyright size={14} />
               </div>
               <div>
-                <p>Mohammad Murad 2024</p>
+                <p>Mohammad Murad 2025</p>
               </div>
             </div>
             <div>
-              <p>Front End Developer - Mobile Developer</p>
+              <p>SAKOAI Agency</p>
             </div>
             <div>
               <p>
