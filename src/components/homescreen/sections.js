@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../animation.module.css";
 import SocialProof from "../Sections/socialProof";
 import Logos from "../Sections/logos";
-import States from "../Sections/states";
+import CallToAction from "../Sections/callToAction";
 
 
 
@@ -24,12 +24,14 @@ function Sections() {
             </li>
             <li className={styles.card3}>
               <div className={styles.card_body}>
-                <States />
+                <CallToAction />
               </div>
             </li>
-            <li className={styles.card4}>
-              <div className={styles.card_body}></div>
-            </li>
+            {/* <li className={styles.card4}>
+              <div className={styles.card_body}>
+                
+              </div>
+            </li> */}
           </ul>
         </div>
       </div>

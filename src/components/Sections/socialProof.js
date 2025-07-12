@@ -3,7 +3,6 @@
 import { Carousel, CarouselContent, CarouselItem } from "../UI/carousel";
 import { motion } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
-import ShineButton from "../UI/shineButton";
 
 export default function SocialProof() {
   const socials = [
@@ -42,7 +41,7 @@ export default function SocialProof() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="w-full px-2 py-10 sm:py-14 md:py-16 lg:py-0"
       >
-        <div id="social-proof" className="mx-auto max-w-7xl">
+        <div id="social" className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl lg:max-w-5xl">
             <div className="text-center mb-10">
               <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight xl:text-white lg:text-gray-700 sm:text-gray-700 text-gray-800">

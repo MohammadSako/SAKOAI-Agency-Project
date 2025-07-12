@@ -28,7 +28,7 @@ export default function Services() {
   const commonNameStyles =
     "text-4xl font-semibold tracking-tight text-balance sm:text-6xl";
   const commonDescStyles =
-    "shadow-md rounded-xl bg-white lg:p-4 p-2 mx-auto mt-4 lg:max-w-lg max-w-sm tracking-wide lg:text-2xl text-lg font-bold text-pretty text-sky-700 sm:text-2xl";
+    "rounded-xl bg-white lg:p-4 p-2 mx-auto mt-4 lg:max-w-lg max-w-sm font-semibold tracking-wide lg:text-4xl text-lg font-bold text-pretty text-sky-700 sm:text-2xl";
 
   const services = [
     {
@@ -78,7 +78,7 @@ export default function Services() {
                 const Icon = service.icon;
                 return (
                   <li
-                    className="img-container 2xl:max-w-2xl 2xl:ml-[750px] xl:max-w-xl xl:ml-[500px] lg:max-w-lg lg:ml-[250px] md:max-w-xl md:ml-[150px] sm:max-w-lg sm:ml-[130px] xs:max-w-sm xs:ml-[105px] max-w-xs ml-[63px] "
+                    className="img-container 2xl:max-w-2xl 2xl:ml-[665px] xl:max-w-xl xl:ml-[500px] lg:max-w-lg lg:ml-[250px] md:max-w-xl md:ml-[150px] sm:max-w-lg sm:ml-[130px] xs:max-w-sm xs:ml-[105px] max-w-xs ml-[63px] "
                     key={service.id}
                   >
                     <div className="flex justify-center items-center p-2 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 ">
