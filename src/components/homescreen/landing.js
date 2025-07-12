@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+
 export default function Landing() {
   return (
     <motion.section

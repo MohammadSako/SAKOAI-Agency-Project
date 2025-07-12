@@ -6,6 +6,7 @@ import { RiVoiceAiFill } from "react-icons/ri";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import ShineButton from "../UI/shineButton";
+import Sphare from "../sphare";
 
 export default function Services() {
   const containerRef = useRef(null);
@@ -25,7 +26,7 @@ export default function Services() {
   }, []);
 
   const commonNameStyles =
-    "text-3xl font-semibold tracking-tight text-balance sm:text-4xl";
+    "text-4xl font-semibold tracking-tight text-balance sm:text-6xl";
   const commonDescStyles =
     "shadow-md rounded-xl bg-white lg:p-4 p-2 mx-auto mt-4 lg:max-w-lg max-w-sm tracking-wide lg:text-2xl text-lg font-bold text-pretty text-sky-700 sm:text-2xl";
 
@@ -77,7 +78,7 @@ export default function Services() {
                 const Icon = service.icon;
                 return (
                   <li
-                    className="img-container 2xl:max-w-lg 2xl:ml-[750px] xl:max-w-xl xl:ml-[500px] lg:max-w-lg lg:ml-[250px] md:max-w-xl md:ml-[150px] sm:max-w-lg sm:ml-[130px] xs:max-w-sm xs:ml-[105px] max-w-xs ml-[63px] "
+                    className="img-container 2xl:max-w-2xl 2xl:ml-[750px] xl:max-w-xl xl:ml-[500px] lg:max-w-lg lg:ml-[250px] md:max-w-xl md:ml-[150px] sm:max-w-xl sm:ml-[130px] xs:max-w-sm xs:ml-[105px] max-w-sm ml-[63px] "
                     key={service.id}
                   >
                     <div className="flex justify-center items-center p-2 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 ">
@@ -98,6 +99,9 @@ export default function Services() {
             </ul>
           </div>
         </section>
+            <div className="flex inset-0 z-10 pointer-events-none">
+              <Sphare />
+            </div>
         <footer>
           <div className="flex flex-col mx-auto lg:max-w-6xl max-w-2xl text-center gap-10 pb-20">
             <p className="text-6xl font-semibold tracking-tight text-balance font-serif">
@@ -107,7 +111,11 @@ export default function Services() {
               Transform your ideas into reality. Schedule a free consultation
               with our team today.
             </p>
-            <ShineButton title="Start Now" bgcolor="#0084d1" textColor="white" />
+            <ShineButton
+              title="Start Now"
+              bgcolor="#0084d1"
+              textColor="white"
+            />
           </div>
         </footer>
       </article>

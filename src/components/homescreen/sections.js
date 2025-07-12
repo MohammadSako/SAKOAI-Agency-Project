@@ -4,6 +4,8 @@ import SocialProof from "../Sections/socialProof";
 import Logos from "../Sections/logos";
 import States from "../Sections/states";
 
+
+
 function Sections() {
   return (
     <>
@@ -26,7 +28,7 @@ function Sections() {
               </div>
             </li>
             <li className={styles.card4}>
-              <div className={styles.card_body}>{/* <Project4 /> */}</div>
+              <div className={styles.card_body}></div>
             </li>
           </ul>
         </div>
