@@ -68,7 +68,7 @@ export default function Services() {
     <div id="services">
       <article>
         <header>
-          <p className="text-7xl font-sans font-bold tracking-tight text-balance mt-20">
+          <p className="text-7xl  font-sans font-bold tracking-tight text-balance mt-20">
             Our Services
           </p>
         </header>
@@ -128,7 +128,7 @@ export default function Services() {
 
       <style jsx>{`
         #services {
-          width: 95vw;
+          width: 98vw;
         }
 
         #services h3 {
