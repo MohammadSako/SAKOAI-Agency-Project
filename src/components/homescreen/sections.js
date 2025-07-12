@@ -25,11 +25,6 @@ function Sections() {
                 <CallToAction />
               </div>
             </li>
-            {/* <li className={styles.card4}>
-              <div className={styles.card_body}>
-                
-              </div>
-            </li> */}
           </ul>
         </div>
       </div>

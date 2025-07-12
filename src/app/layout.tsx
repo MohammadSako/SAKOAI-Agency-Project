@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBarNextUI from "@/components/layouts/NavbarWithNextUI";
-import Footer from "@/components/layouts/footer";
 import PageLine from "@/components/UI/pageLine";
 const inter = Inter({ subsets: ["latin"] });
 import { NextUIProvider } from "@nextui-org/system";
@@ -25,7 +24,6 @@ export default function RootLayout({
           <PageLine />
           <NavBarNextUI />
           {children}
-          {/* <Footer /> */}
         </NextUIProvider>
       </body>
     </html>

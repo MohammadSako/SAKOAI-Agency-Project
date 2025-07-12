@@ -52,8 +52,12 @@ export default function Logos() {
         </div>
       </div>
       <div>
-        <Link href="#call">
-          <ShineButton title="Start Now" bgcolor="#446a9b" textColor="white" />
+        <Link href={"#call"}>
+          <ShineButton
+            title="BOOK A FREE CALL"
+            bgcolor="#334B6B"
+            textColor="white"
+          />
         </Link>
       </div>
     </div>
