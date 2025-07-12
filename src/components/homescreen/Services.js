@@ -125,7 +125,7 @@ export default function Services() {
 
       <style jsx>{`
         #services {
-          width: 98vw;
+          width: 95vw;
         }
 
         #services h3 {
