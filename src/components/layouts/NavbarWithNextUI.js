@@ -37,7 +37,7 @@ export default function NavBarNextUI() {
     { name: "Home", href: "#home", current: true },
     { name: "Our Services", href: "#services", current: false },
     { name: "Social Proof", href: "#social", current: false },
-    { name: "Call-to-Action", href: "#call", current: false },
+    { name: "Book Call", href: "#call", current: false },
     { name: "FAQs", href: "#faqs", current: false },
     { name: "Contact", href: "#contact", current: false },
   ];
